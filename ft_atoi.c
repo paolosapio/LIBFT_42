@@ -6,10 +6,9 @@
 /*   By: psapio <marvin@42.fr>                      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/10/23 15:45:44 by psapio            #+#    #+#             */
-/*   Updated: 2023/10/23 16:20:01 by psapio           ###   ########.fr       */
+/*   Updated: 2023/11/20 15:57:40 by psapio           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
-
 #include "libft.h"
 
 int	ft_atoi(const char *nptr)
@@ -21,19 +20,19 @@ int	ft_atoi(const char *nptr)
 	i = 0;
 	sign = 1;
 	conversion = 0;
-	if (nptr[0] == '+')
-	{
+	while ((nptr[i] == ' ') || (nptr[i] >= 9 && nptr[i] <= 13))
 		i++;
-	}
-	if (nptr[0] == '-')
+	if (nptr[i] == '+')
+		i++;
+	else if (nptr[i] == '-')
 	{
 		sign = -1;
 		i++;
 	}
-	while ((nptr[i] != '\0') && ((nptr[i] > '/') && (nptr[i] < ':')))
+	while ((nptr[i] != '\0') && ((nptr[i] >= '0') && (nptr[i] <= '9')))
 	{
 		conversion = conversion * 10;
-		conversion = conversion + nptr[i] - 48;
+		conversion = conversion + nptr[i] - '0';
 		i++;
 	}
 	conversion = conversion * sign;
@@ -42,9 +41,9 @@ int	ft_atoi(const char *nptr)
 /*
 int	main(void)
 {
-	char	number[] = "-2147483648";
+	char	number[] = "2147483648";
 	int		result;
 
-	result = ft_atoi(number);
+	result = atoi(number);
 	printf("%d\n", result);
 }*/

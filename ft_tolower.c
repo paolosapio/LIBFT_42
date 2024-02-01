@@ -6,11 +6,10 @@
 /*   By: psapio <psapio@student.42madrid.c>         +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/10/17 15:39:32 by psapio            #+#    #+#             */
-/*   Updated: 2023/10/17 15:58:36 by psapio           ###   ########.fr       */
+/*   Updated: 2023/11/20 16:57:42 by psapio           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
-
-#include <stdio.h>
+#include "libft.h"
 
 int	ft_tolower(int c)
 {

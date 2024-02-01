@@ -6,67 +6,41 @@
 /*   By: psapio <marvin@42.fr>                      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/10/25 12:09:11 by psapio            #+#    #+#             */
-/*   Updated: 2023/10/25 14:20:52 by psapio           ###   ########.fr       */
+/*   Updated: 2023/11/08 19:08:05 by psapio           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 #include "libft.h"
 
 int	ft_memcmp(const void *s1, const void *s2, size_t n)
 {
-	int i;
-	i = 0;
+	size_t			i;
+	unsigned char	*string1;
+	unsigned char	*string2;
 
-	while(i + 1 < n)
+	string1 = (unsigned char *)s1;
+	string2 = (unsigned char *)s2;
+	i = 0;
+	while (i < n)
 	{
-// 		printf("%", s1[i]);
-		if (((unsigned char*)s1)[i] != ((unsigned char*)s2)[i])
-			break;
+		if (string1[i] != string2[i])
+			return (string1[i] - string2[i]);
 		i++;
 	}
-	return (((unsigned char*)s1)[i] - ((unsigned char*)s2)[i]);
-}
-
-#include <string.h>
-int main(void)
-{
-	char *frase_a = 0;//frase_a [] = "";
-	char *frase_b = 0;//frase_b [] = //"";
-	size_t grandezza;
-	int result;
-
-	grandezza = 0;
-	result = ft_memcmp(frase_a, frase_b, grandezza);
-	printf("%d\n", result);
-	printf("%d\n",memcmp(frase_a, frase_b, grandezza));
+	return (0);
 }
 /*
-//segunda solucion, mas elegante gracias a borja
-int	ft_memcmp(const void *s1, const void *s2, size_t n)
-{
-	int i;
-	i = 0;
-
-	while(i < n)
-	{
-		if (((unsigned char*)s1)[i] != ((unsigned char*)s2)[i])
-		{
-			return (((unsigned char*)s1)[i] - ((unsigned char*)s2)[i]);
-		}
-		i++;
-	}
-		return (0);
-}
-
-#include <string.h>
 int main(void)
 {
-	char frase_a [] = "1234568";
-	char frase_b [] = "1234567";
+	//char *frase_a = 0;
+	char frase_a [] = "hola";
+	//char *frase_b = 0;
+	char frase_b [] = "hola caaaaana gon ren gesnj";
 	size_t grandezza;
 	int result;
 
-	grandezza = 0;
+	grandezza = 7;
 	result = ft_memcmp(frase_a, frase_b, grandezza);
-	printf("%d\n", result);
-	printf("%d\n",memcmp(frase_a, frase_b, grandezza));
-}*/
+	//printf("%d\n", result);
+	printf("%d\n",ft_memcmp(frase_a, frase_b, grandezza));
+}
+*/

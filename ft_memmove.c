@@ -1,43 +1,53 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_memchr.c                                        :+:      :+:    :+:   */
+/*   ft_memmove.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: psapio <marvin@42.fr>                      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2023/10/24 14:05:30 by psapio            #+#    #+#             */
-/*   Updated: 2023/11/20 16:17:14 by psapio           ###   ########.fr       */
+/*   Created: 2023/10/26 14:20:30 by psapio            #+#    #+#             */
+/*   Updated: 2023/11/03 11:15:23 by psapio           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 #include "libft.h"
 
-void	*ft_memchr(const void *s, int c, size_t n)
+void	*ft_memmove(void *dst, const void *src, size_t len)
 {
-	size_t				i;
-	unsigned char		character;
-	const unsigned char	*sentence;
+	size_t		i;
+	const char	*s;
+	char		*d;
 
-	character = c;
-	sentence = s;
+	s = src;
+	d = dst;
 	i = 0;
-	while (i < n)
-	{	
-		if (sentence[i] == character)
-			return ((void *)&sentence[i]);
-		i++;
+	if (s > d)
+	{
+		while (len > 0)
+		{
+			d[i] = s[i];
+			i++;
+			len--;
+		}
 	}
-	return (NULL);
+	if (s < d)
+	{
+		while (len > 0)
+		{
+			d[len - 1] = s[len - 1];
+			len--;
+		}
+	}
+	return (dst);
 }
 /*
 int	main(void)
 {
-	char	words[] = "Nothing is born from diamonds, flowers are born from dirt";
-	int		character;
-	size_t	size;
-	char	*result;
+	char		sentence[] = "viva la Vida";
+	size_t		limit;
+	void		*result;
 
-	character = ',';
-	size = 30;
-	result = ft_memchr(words, character, size);
+	limit = 5;
+	result = ft_memmove(sentence, sentence, limit);
 	printf("%s\n", result);
+	printf("%s\n", sentence);
 }*/

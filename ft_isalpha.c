@@ -6,11 +6,10 @@
 /*   By: psapio <psapio@student.42madrid.com>       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/10/17 10:05:37 by psapio            #+#    #+#             */
-/*   Updated: 2023/10/17 14:58:13 by psapio           ###   ########.fr       */
+/*   Updated: 2023/11/20 16:06:15 by psapio           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
-/*#include <ctype.h>
-#include <stdio.h>*/
+#include "libft.h"
 
 int	ft_isalpha(int c)
 {

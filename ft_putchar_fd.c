@@ -1,44 +1,29 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_bzero.c                                         :+:      :+:    :+:   */
+/*   ft_putchar_fd.c                                    :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: psapio <marvin@42.fr>                      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2023/10/23 17:16:48 by psapio            #+#    #+#             */
-/*   Updated: 2023/11/12 12:30:35 by psapio           ###   ########.fr       */
+/*   Created: 2023/11/18 13:59:41 by psapio            #+#    #+#             */
+/*   Updated: 2023/11/18 18:59:39 by psapio           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 #include "libft.h"
 
-void	ft_bzero(void *s, size_t n)
-{	
-	int	a;
-
-	a = 0;
-	while (n != 0)
-	{
-		((char *)s)[a] = '\0';
-		n--;
-		a++;
-	}
+void	ft_putchar_fd(char c, int fd)
+{
+	write(fd, &c, 1);
 }
 /*
+#include <fcntl.h>
 int main(void)
 {
-//	char array[20]="hola estrella";
-	int array_int[7]= {-1,5,200,13,1,11,10};
-	size_t numberof;
-	int i;
+	char caracter;
+	int nombre_archivo;
 
-	numberof = 5;
-	ft_bzero(array, numberof);
-	ft_bzero(array_int, 1);	
-	i = 0;
-	while (i < 7)
-	{
-		printf("[%d]\n", array_int[i]);
-		i++;
-	}
-}
-*/
+	caracter = 'C';
+	nombre_archivo = open("texto_sagro_de_paolo", O_RDWR);
+	ft_putchar_fd(caracter, nombre_archivo);
+	close(nombre_archivo);
+}*/

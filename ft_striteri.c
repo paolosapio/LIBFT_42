@@ -1,44 +1,37 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_bzero.c                                         :+:      :+:    :+:   */
+/*   ft_striteri.c                                      :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: psapio <marvin@42.fr>                      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2023/10/23 17:16:48 by psapio            #+#    #+#             */
-/*   Updated: 2023/11/12 12:30:35 by psapio           ###   ########.fr       */
+/*   Created: 2023/11/17 20:21:33 by psapio            #+#    #+#             */
+/*   Updated: 2023/11/18 20:19:33 by psapio           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 #include "libft.h"
+/*
+void	upper(unsigned int iterador, char *frase)
+{
+	frase[iterador] = ft_toupper(frase[iterador]);
+}
+*/
+void	ft_striteri(char *s, void (*f)(unsigned int, char*))
+{
+	size_t	i;
 
-void	ft_bzero(void *s, size_t n)
-{	
-	int	a;
-
-	a = 0;
-	while (n != 0)
+	i = 0;
+	while (s[i] != '\0')
 	{
-		((char *)s)[a] = '\0';
-		n--;
-		a++;
+		f(i, &s[i]);
+		i++;
 	}
 }
 /*
 int main(void)
 {
-//	char array[20]="hola estrella";
-	int array_int[7]= {-1,5,200,13,1,11,10};
-	size_t numberof;
-	int i;
-
-	numberof = 5;
-	ft_bzero(array, numberof);
-	ft_bzero(array_int, 1);	
-	i = 0;
-	while (i < 7)
-	{
-		printf("[%d]\n", array_int[i]);
-		i++;
-	}
-}
-*/
+	char arrayc [] = "viva la vida";
+	ft_striteri(arrayc, upper);
+	//printf("%s\n", arrayc);
+	printf("b\n");
+}*/

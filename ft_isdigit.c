@@ -6,11 +6,10 @@
 /*   By: psapio <psapio@student.42madrid.c>         +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/10/17 15:32:53 by psapio            #+#    #+#             */
-/*   Updated: 2023/10/18 09:32:28 by psapio           ###   ########.fr       */
+/*   Updated: 2023/11/20 16:11:32 by psapio           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
-
-/*#include <stdio.h>*/
+#include "libft.h"
 
 int	ft_isdigit(int c)
 {

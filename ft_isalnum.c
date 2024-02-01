@@ -6,12 +6,12 @@
 /*   By: psapio <psapio@student.42madrid.c>         +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/10/18 11:45:39 by psapio            #+#    #+#             */
-/*   Updated: 2023/10/18 13:05:14 by psapio           ###   ########.fr       */
+/*   Updated: 2023/11/20 16:08:21 by psapio           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
-/*#include <stdio.h>
-*/
-int	isalnum(int c)
+#include "libft.h"
+
+int	ft_isalnum(int c)
 {
 	return (((c >= 'a') && (c <= 'z'))
 		|| ((c >= 'A') && (c <= 'Z'))
@@ -23,5 +23,5 @@ int	main(void)
 	char	value;
 
 	value = 'F';
-	printf("%d\n", isalnum(value));
+	printf("%d\n", ft_isalnum(value));
 }*/
