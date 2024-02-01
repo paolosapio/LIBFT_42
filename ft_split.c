@@ -6,11 +6,13 @@
 /*   By: psapio <marvin@42.fr>                      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/11/11 11:06:27 by psapio            #+#    #+#             */
-/*   Updated: 2023/11/15 10:48:48 by psapio           ###   ########.fr       */
+/*   Updated: 2024/02/01 11:26:41 by psapio           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 #include "libft.h"
-
+/*
+La función ft_split divide la cadena s en subcadenas usando el carácter delimitador c y devuelve un array de punteros a cadenas (char **). Estas subcadenas se obtienen extrayendo partes de la cadena s separadas por ocurrencias del carácter c. El array resultante contiene todas las subcadenas extraídas, seguidas de un puntero nulo para indicar el final del array. Esta función es útil para dividir una cadena en palabras o tokens, por ejemplo, para procesar entradas del usuario o archivos de texto. La implementación de ft_split típicamente involucra iterar sobre la cadena s, buscando ocurrencias del delimitador c, extrayendo subcadenas y almacenándolas en el array resultante. Se debe tener en cuenta la gestión de la memoria para asignar espacio suficiente para el array resultante y para cada subcadena. Además, la función debe manejar casos especiales, como cuando la cadena está vacía o cuando no hay ocurrencias del delimitador.
+*/
 size_t	counter_word(char const	*s, char c)
 {
 	size_t	i;
@@ -57,7 +59,7 @@ void	*word_allocator(char const *s, char c, char **two_d_array)
 }
 
 char	**ft_split(char const *s, char c)
-{	
+{
 	char	**two_d_array;
 	size_t	number_words;
 
