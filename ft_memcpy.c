@@ -10,7 +10,18 @@
 /*                                                                            */
 /* ************************************************************************** */
 #include "libft.h"
-
+/*
+La función ft_memcpy copia n bytes de datos desde la dirección de memoria
+apuntada por src a la dirección de memoria apuntada por dst.
+Es importante destacar que las áreas de memoria a las que apuntan src y dst no
+deben superponerse, ya que el comportamiento en ese caso es indefinido.
+La implementación típica de ft_memcpy implica copiar byte a byte los datos
+desde la dirección de memoria apuntada por src a la dirección de memoria
+apuntada por dst. Esto se realiza mediante un bucle que itera n veces,
+copiando cada byte de src a dst. Es importante tener en cuenta que esta
+función no comprueba si las áreas de memoria se superponen, por lo que es
+responsabilidad del programador garantizar que esto no ocurra.
+*/
 void	*ft_memcpy(void *dst, const void *src, size_t n)
 {
 	unsigned char	*search;

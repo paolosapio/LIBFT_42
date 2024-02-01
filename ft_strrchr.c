@@ -11,7 +11,18 @@
 /* ************************************************************************** */
 #include "libft.h"
 /*
-La función ft_strrchr busca la última aparición del carácter c en la cadena s y devuelve un puntero a la posición de memoria del último carácter encontrado dentro de la cadena. Si el carácter c no está presente en la cadena s, la función devuelve NULL. Esta función es útil para buscar la última presencia de un carácter específico dentro de una cadena, como en la implementación de algoritmos de búsqueda o análisis de cadenas de texto. La implementación típica de ft_strrchr implica iterar sobre la cadena s en sentido inverso, comenzando desde el último carácter antes del carácter nulo terminador '\0' y retrocediendo hasta encontrar la última ocurrencia del carácter c. Una vez encontrado, la función devuelve un puntero a esa posición de memoria. Si no se encuentra ninguna ocurrencia del carácter c, la función devuelve NULL. 
+La función ft_strrchr busca la última aparición del carácter c en la
+cadena s y devuelve un puntero a la posición de memoria del último carácter
+encontrado dentro de la cadena. Si el carácter c no está presente en la
+cadena s, la función devuelve NULL. Esta función es útil para buscar la
+última presencia de un carácter específico dentro de una cadena, como en
+la implementación de algoritmos de búsqueda o análisis de cadenas de texto.
+La implementación típica de ft_strrchr implica iterar sobre la cadena s en
+sentido inverso, comenzando desde el último carácter antes del carácter nulo
+terminador '\0' y retrocediendo hasta encontrar la última ocurrencia del
+carácter c. Una vez encontrado, la función devuelve un puntero a esa posición
+de memoria. Si no se encuentra ninguna ocurrencia del carácter c,
+la función devuelve NULL. 
 */
 char	*ft_strrchr(const char *s, int c)
 {

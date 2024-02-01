@@ -10,7 +10,19 @@
 /*                                                                            */
 /* ************************************************************************** */
 #include "libft.h"
-
+/*
+La función ft_strdup crea una copia duplicada de la cadena de caracteres s
+en una nueva área de memoria asignada dinámicamente. La cadena de caracteres
+s debe ser una cadena de caracteres terminada por un carácter nulo ('\0').
+La función asigna memoria suficiente para almacenar la nueva cadena, incluyendo
+el carácter nulo final, y luego copia el contenido de la cadena s en esta
+nueva área de memoria. La implementación típica de ft_strdup implica calcular
+la longitud de la cadena s utilizando la función ft_strlen, asignar memoria
+suficiente utilizando la función malloc y luego copiar el contenido de la
+cadena s en la nueva área de memoria utilizando la función ft_memcpy o similar.
+Es importante recordar que la memoria asignada por ft_strdup debe ser liberada
+utilizando free cuando ya no se necesite para evitar fugas de memoria.
+*/
 char	*ft_strdup(const char *s1)
 {
 	size_t	size_p;

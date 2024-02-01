@@ -11,7 +11,19 @@
 /* ************************************************************************** */
 #include "libft.h"
 /*
-La función ft_split divide la cadena s en subcadenas usando el carácter delimitador c y devuelve un array de punteros a cadenas (char **). Estas subcadenas se obtienen extrayendo partes de la cadena s separadas por ocurrencias del carácter c. El array resultante contiene todas las subcadenas extraídas, seguidas de un puntero nulo para indicar el final del array. Esta función es útil para dividir una cadena en palabras o tokens, por ejemplo, para procesar entradas del usuario o archivos de texto. La implementación de ft_split típicamente involucra iterar sobre la cadena s, buscando ocurrencias del delimitador c, extrayendo subcadenas y almacenándolas en el array resultante. Se debe tener en cuenta la gestión de la memoria para asignar espacio suficiente para el array resultante y para cada subcadena. Además, la función debe manejar casos especiales, como cuando la cadena está vacía o cuando no hay ocurrencias del delimitador.
+La función ft_split divide la cadena s en subcadenas usando el carácter
+delimitador c y devuelve un array de punteros a cadenas (char **).
+Estas subcadenas se obtienen extrayendo partes de la cadena s separadas
+por ocurrencias del carácter c. El array resultante contiene todas las
+subcadenas extraídas, seguidas de un puntero nulo para indicar el final
+del array. Esta función es útil para dividir una cadena en palabras o tokens,
+por ejemplo, para procesar entradas del usuario o archivos de texto.
+La implementación de ft_split típicamente involucra iterar sobre la cadena s,
+buscando ocurrencias del delimitador c, extrayendo subcadenas y almacenándolas
+en el array resultante. Se debe tener en cuenta la gestión de la memoria
+para asignar espacio suficiente para el array resultante y para cada
+subcadena. Además, la función debe manejar casos especiales, como cuando
+la cadena está vacía o cuando no hay ocurrencias del delimitador.
 */
 size_t	counter_word(char const	*s, char c)
 {

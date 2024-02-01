@@ -10,13 +10,33 @@
 /*                                                                            */
 /* ************************************************************************** */
 #include "libft.h"
-/*char	randomize_conversor(unsigned int none, char c)
+/*
+La función ft_strmapi recorre la cadena de caracteres s y aplica la
+función f a cada carácter de la cadena, pasando como argumento el índice
+de cada carácter. La función f debe ser una función que toma como argumentos
+un índice entero y un carácter, y devuelve un nuevo carácter resultado de
+aplicar alguna operación a ese carácter en particular. La función ft_strmapi
+devuelve una nueva cadena de caracteres que contiene los caracteres
+resultantes después de aplicar la función f a cada uno. La implementación
+típica de ft_strmapi implica un bucle que itera sobre los caracteres de la
+cadena s, pasando el índice de cada carácter a la función f junto con una
+referencia al carácter correspondiente. La función f puede realizar cualquier
+operación deseada en el carácter basándose en el índice proporcionado y
+devolver el resultado. La nueva cadena resultante se construye concatenando
+los caracteres resultantes devueltos por f. Es importante destacar que
+ft_strmapi permite aplicar una operación personalizada a cada carácter de
+una cadena y es útil para realizar transformaciones específicas en una
+cadena de caracteres.
+*/
+/*
+char	randomize_conversor(unsigned int none, char c)
 {
 	char	a;
 
 	a = (int)(c + none);
 	return (a);
-}*/
+}
+*/
 
 char	*ft_strmapi(char const *s, char (*f)(unsigned int, char))
 {

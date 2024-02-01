@@ -10,7 +10,24 @@
 /*                                                                            */
 /* ************************************************************************** */
 #include "libft.h"
-
+/*
+La función ft_strnstr busca la primera aparición de la subcadena needle
+dentro de la cadena haystack, limitando la búsqueda a los primeros len
+caracteres de la cadena haystack. Si se encuentra la subcadena, la función
+devuelve un puntero al inicio de la primera ocurrencia dentro de los primeros
+len caracteres de haystack. Si no se encuentra la subcadena o si la longitud
+de la subcadena needle es mayor que len, la función devuelve NULL.
+La implementación típica de ft_strnstr implica un bucle que itera sobre
+los primeros len caracteres de la cadena haystack, buscando una coincidencia
+con la subcadena needle. Para cada caracter en haystack, se compara con el
+primer caracter de needle, y si hay una coincidencia, se verifica si los
+siguientes caracteres coinciden hasta que se complete needle o se alcance
+el límite de len. Si se encuentra una coincidencia completa, se devuelve
+un puntero al inicio de esa ocurrencia. Es importante tener en cuenta que
+ft_strnstr es una versión segura de ft_strstr que limita la búsqueda
+dentro de los primeros len caracteres de la cadena principal, lo que
+evita lecturas fuera de límites y mejora la seguridad.
+*/
 char	*ft_strnstr(const char *haystack, const char *needle, size_t len)
 {
 	size_t	a;

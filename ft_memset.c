@@ -10,7 +10,22 @@
 /*                                                                            */
 /* ************************************************************************** */
 #include "libft.h"
-
+/*
+La función ft_memset llena los primeros n bytes de la región de memoria
+apuntada por s con el valor especificado c. Esto es útil para inicializar
+o llenar un bloque de memoria con un valor específico. El valor c se
+interpreta como un byte sin signo y es repetido para llenar los n bytes
+consecutivos de la memoria apuntada por s.
+La implementación típica de ft_memset involucra un bucle que itera sobre los n
+primeros bytes de la región de memoria apuntada por s, asignando el valor c a
+cada byte individualmente. Esto garantiza que se llenen todos los bytes
+requeridos con el valor especificado.
+Es importante tener en cuenta que ft_memset es una función básica y útil para
+inicializar memoria con un valor específico, pero no debe confundirse con
+ft_bzero, que establece los bytes de memoria en cero. Mientras que ft_memset
+llena la memoria con un byte específico, ft_bzero establece
+los bytes de memoria en cero.
+*/
 void	*ft_memset(void *b, int c, size_t len)
 {
 	int				i;

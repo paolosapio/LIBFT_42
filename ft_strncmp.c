@@ -10,7 +10,23 @@
 /*                                                                            */
 /* ************************************************************************** */
 #include "libft.h"
-
+/*
+La función ft_strncmp compara los primeros n caracteres de las cadenas de
+caracteres s1 y s2. Devuelve un valor entero menor que, igual a, o mayor
+que cero si s1 es lexicográficamente menor que, igual a, o mayor que s2,
+respectivamente. La comparación se detiene después de n caracteres o cuando
+se encuentra un carácter nulo ('\0') en cualquiera de las cadenas.
+La implementación típica de ft_strncmp implica un bucle que itera sobre los
+primeros n caracteres de ambas cadenas, comparando cada par de caracteres.
+La función devuelve la diferencia entre los valores ASCII de los caracteres
+en caso de que difieran, o cero si los primeros n caracteres de ambas
+cadenas son idénticos. Es importante tener en cuenta que la función
+ft_strncmp es sensible a mayúsculas y minúsculas, lo que significa que
+considera las diferencias de mayúsculas y minúsculas al comparar
+los caracteres. Esta función es útil cuando se necesita comparar las
+primeras n caracteres de dos cadenas de caracteres de manera segura,
+sin importar la longitud total de las cadenas.
+*/
 int	ft_strncmp(const char *s1, const char *s2, size_t n)
 {
 	int				a;

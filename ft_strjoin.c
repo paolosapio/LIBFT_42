@@ -10,7 +10,19 @@
 /*                                                                            */
 /* ************************************************************************** */
 #include "libft.h"
-
+/*
+La función ft_strjoin concatena las cadenas de caracteres s1 y s2 en una
+nueva cadena de caracteres. La función asigna memoria suficiente para
+almacenar la nueva cadena resultante, que es una combinación de las cadenas
+s1 y s2, incluyendo el carácter nulo final ('\0'). La nueva cadena resultante
+contiene la concatenación de s1 seguido de s2. La implementación típica de
+ft_strjoin implica calcular la longitud de las cadenas s1 y s2, asignar
+memoria suficiente para la nueva cadena resultante utilizando la
+función malloc, y luego copiar el contenido de s1 seguido de s2 en la
+nueva área de memoria utilizando la función ft_memcpy o similar.
+Es importante recordar que la memoria asignada por ft_strjoin debe ser
+liberada utilizando free cuando ya no se necesite para evitar fugas de memoria.
+*/
 char	*ft_strjoin(char const *s1, char const *s2)
 {
 	size_t	i;

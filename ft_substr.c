@@ -13,7 +13,21 @@
 #include "libft.h"
 #include <stdlib.h>
 #include <string.h>
-
+/*
+La función ft_substr toma como entrada una cadena de caracteres s,
+un índice start que indica el inicio de la subcadena y una longitud len que
+especifica la cantidad máxima de caracteres a extraer. La función devuelve
+una nueva cadena que contiene la subcadena extraída de s. La implementación
+típica de ft_substr implica la asignación de memoria para la nueva subcadena
+y luego la copia de los caracteres apropiados desde la posición start hasta
+start + len - 1. Si start es mayor que la longitud de la cadena s, o si len
+es cero, la función devuelve una nueva cadena vacía. Si start + len excede
+la longitud de s, la función copia todos los caracteres disponibles hasta
+el final de la cadena s. Es importante destacar que ft_substr proporciona
+una forma conveniente de extraer una parte específica de una cadena de
+caracteres, lo que es útil en situaciones donde se necesitan fragmentos
+de cadenas para su posterior procesamiento.
+*/
 char	*ft_substr(const char *s, unsigned int start, size_t len)
 {
 	size_t	substring_length;

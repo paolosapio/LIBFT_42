@@ -10,7 +10,24 @@
 /*                                                                            */
 /* ************************************************************************** */
 #include "libft.h"
-
+/*
+La función ft_strlcat concatena la cadena de origen src a la cadena de
+destino dst, asegurando que el resultado no exceda un tamaño máximo
+especificado. El parámetro size indica el tamaño total disponible para la
+cadena de destino, incluyendo el espacio para el carácter nulo final ('\0').
+La función devuelve el tamaño total que tendría la cadena de destino si no se
+aplicara ninguna restricción de tamaño. La implementación típica de
+ft_strlcat implica encontrar la longitud actual de la cadena de destino
+dst y luego concatenar la cadena de origen src a dst, teniendo en cuenta
+el tamaño máximo especificado por size. La función asegura que el resultado
+final esté correctamente terminado con el carácter nulo final y que no exceda
+el tamaño máximo especificado. Si la longitud de dst más la longitud de src
+es mayor o igual que size, se truncará src para que quepa dentro del tamaño
+máximo. Es importante destacar que ft_strlcat es una función segura que evita
+desbordamientos de búfer y garantiza que la cadena resultante esté
+correctamente terminada. Esta función es muy útil en situaciones donde
+se necesita concatenar cadenas con un límite de tamaño máximo.
+*/
 size_t	ft_strlcat(char *dst, const char *src, size_t dstsize)
 {
 	size_t	size_dst;

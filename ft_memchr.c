@@ -11,7 +11,14 @@
 /* ************************************************************************** */
 #include "libft.h"
 /*
-La función ft_memchr busca la primera aparición del byte c en los primeros n bytes del bloque de memoria apuntado por s. Se realiza una búsqueda secuencial byte por byte dentro del rango especificado. Si se encuentra el byte c, la función devuelve un puntero a la posición de memoria del byte correspondiente dentro del bloque de memoria. Si el byte c no se encuentra en los primeros n bytes, la función devuelve NULL. Esta función es útil para buscar un byte específico dentro de un bloque de memoria, como en la implementación de algoritmos de búsqueda o análisis de datos binarios.
+La función ft_memchr busca la primera aparición del byte c en los primeros
+n bytes del bloque de memoria apuntado por s. Se realiza una búsqueda
+secuencial byte por byte dentro del rango especificado. Si se encuentra el
+byte c, la función devuelve un puntero a la posición de memoria del byte
+correspondiente dentro del bloque de memoria. Si el byte c no se encuentra
+en los primeros n bytes, la función devuelve NULL. Esta función es útil para
+buscar un byte específico dentro de un bloque de memoria, como en la
+implementación de algoritmos de búsqueda o análisis de datos binarios.
 */
 void	*ft_memchr(const void *s, int c, size_t n)
 {
