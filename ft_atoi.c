@@ -6,7 +6,7 @@
 /*   By: psapio <marvin@42.fr>                      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/10/23 15:45:44 by psapio            #+#    #+#             */
-/*   Updated: 2024/02/01 11:17:42 by psapio           ###   ########.fr       */
+/*   Updated: 2024/02/02 12:20:15 by psapio           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 #include "libft.h"
@@ -56,3 +56,4 @@ int	main(void)
 	result = atoi(number);
 	printf("%d\n", result);
 }*/
+
