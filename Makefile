@@ -38,11 +38,13 @@ SRCS	= \
 		
 OBJS	=	$(SRCS:.c=.o)
 
-CC	=	gcc 
+CC	=	cc 
 
 RM	=	rm -f
 
 CFLAGS	=	-Wall -Wextra -Werror
+
+#-----------------------------------------
 
 all		:	$(NAME)
 
@@ -55,7 +57,9 @@ clean	:
 fclean	:	clean
 			$(RM) $(NAME)
 
-
-.PHONY	:	all clean fclean re
-
 re	:	fclean all
+
+caca :
+	 ls
+
+.PHONY	:	all clean fclean re ls

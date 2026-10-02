@@ -3,12 +3,13 @@
 /*                                                        :::      ::::::::   */
 /*   ft_calloc.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: psapio <marvin@42.fr>                      +#+  +:+       +#+        */
+/*   By: psapio <psapio@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/11/02 17:15:06 by psapio            #+#    #+#             */
-/*   Updated: 2023/11/20 16:02:24 by psapio           ###   ########.fr       */
+/*   Updated: 2026/10/02 15:30:53 by psapio           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
+
 #include "libft.h"
 
 void	*ft_calloc(size_t count, size_t size)
@@ -18,7 +19,7 @@ void	*ft_calloc(size_t count, size_t size)
 	char	*pointer;
 
 	i = 0;
-	if (size != 0 && count >= SIZE_MAX / size)
+	if (size != 0 && count >= __SIZE_MAX__ / size)
 		return (NULL);
 	total_size = count * size;
 	pointer = malloc(total_size);
